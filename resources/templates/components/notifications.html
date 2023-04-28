@@ -1,0 +1,9 @@
+{% with notifications = get_flashed_messages(category_filter='success')%}
+    {% if notifications %}
+        <div class="alert alert-success" role="alert">
+            {% for notification in notifications %}
+                {{ notification }}
+            {% endfor %}
+         </div>
+    {% endif %}
+{% endwith %} 
